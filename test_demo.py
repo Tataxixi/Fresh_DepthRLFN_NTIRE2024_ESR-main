@@ -30,9 +30,9 @@ def select_model(args, device):
         model.load_state_dict(torch.load(model_path), strict=True)
     elif model_id == 1:
 
-        from models.team01_DepthRLFN import RLFN_PruneLocal
+        from models.team42_DepthRLFN import RLFN_PruneLocal
         name, data_range = f"{model_id:02}_DepthRLFN", 1.0
-        model_path = os.path.join('model_zoo', 'team01_DepthRLFN.pth')
+        model_path = os.path.join('model_zoo', 'team42_DepthRLFN.pth')
         model = RLFN_PruneLocal()
         model.load_state_dict(torch.load(model_path), strict=True)
 
